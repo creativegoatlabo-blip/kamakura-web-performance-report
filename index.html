@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="鎌倉彫金工房 主要コース7ページ 表示品質改善プロジェクト作業完了報告書">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>主要コース7ページ 表示品質改善プロジェクト｜作業完了報告書</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;600;700&amp;family=Shippori+Mincho:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./tokens.css">
+  <style>
+    /* Hallmark · genre: editorial · tone: evidence-led · palette: warm copper · macrostructure: Narrative Workflow · theme: Newsprint · enrichment: none · nav: N9 · footer: Ft4
+     * Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5
+     * Hallmark · contrast: pass (46–50) · slop: pass (51–55) · honest: pass (56) · chrome: pass (57) · tokens: pass (58) · responsive: pass (59) · icons: pass (60) · mobile: pass (36, 59, 61–69)
+     */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      overflow-x: clip;
+    }
+
+    html {
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100dvh;
+      padding: 1.5rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ol,
+    ul,
+    dl,
+    dd,
+    figure {
+      margin: 0;
+    }
+
+    ol,
+    ul {
+      padding: 0;
+    }
+
+    .report {
+      display: flex;
+      flex-direction: column;
+      width: min(var(--page-width), 100%);
+      min-height: var(--page-height);
+      margin-inline: auto;
+      padding: var(--page-pad-top) var(--page-pad-inline) var(--page-pad-bottom);
+      background:
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 32px 32px,
+        var(--paper);
+      box-shadow: var(--shadow-page);
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: var(--space-md);
+      padding-block-end: var(--space-xs);
+      border-block-end: 3px double var(--rule-dark);
+    }
+
+    .masthead__kicker,
+    .section-kicker,
+    .status__label,
+    .evidence__meta,
+    .decision__kicker,
+    .scope__label {
+      color: var(--accent);
+      font-family: var(--font-en);
+      font-size: var(--text-2xs);
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .masthead__brand {
+      margin-block-start: var(--space-3xs);
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .masthead__meta {
+      color: var(--muted);
+      font-size: var(--text-xs);
+      line-height: 1.45;
+      text-align: right;
+    }
+
+    .masthead__meta strong {
+      display: block;
+      color: var(--ink);
+      font-family: var(--font-en);
+      letter-spacing: 0.08em;
+    }
+
+    main {
+      display: grid;
+      flex: 1;
+      gap: var(--space-3xs);
+      align-content: space-between;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(11rem, 0.55fr);
+      gap: var(--space-xl);
+      align-items: end;
+      padding-block: var(--space-3xs) var(--space-xs);
+    }
+
+    .hero h1 {
+      min-width: 0;
+      max-width: 17ch;
+      margin-block: var(--space-xs);
+      overflow-wrap: anywhere;
+      font-family: var(--font-display);
+      font-size: var(--text-display);
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      line-height: 1.22;
+    }
+
+    .hero h1 em {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .hero__lead {
+      max-width: 70ch;
+      color: var(--ink-soft);
+      font-size: var(--text-sm);
+      line-height: 1.75;
+    }
+
+    .hero__lead strong {
+      color: var(--ink);
+    }
+
+    .status {
+      padding-block-start: var(--space-xs);
+      border-block-start: 1px solid var(--rule-dark);
+    }
+
+    .status__value {
+      display: flex;
+      gap: var(--space-xs);
+      align-items: baseline;
+      margin-block: var(--space-2xs) var(--space-xs);
+      color: var(--accent);
+      font-family: var(--font-display);
+      font-size: 2.65rem;
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .status__value span {
+      color: var(--ink-soft);
+      font-family: var(--font-en);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .status__facts {
+      display: grid;
+      gap: var(--space-3xs);
+      color: var(--ink-soft);
+      font-size: var(--text-xs);
+      line-height: 1.45;
+    }
+
+    .status__facts div {
+      display: grid;
+      grid-template-columns: 4rem minmax(0, 1fr);
+      gap: var(--space-xs);
+    }
+
+    .status__facts dt {
+      color: var(--muted);
+    }
+
+    .status__facts dd {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .evidence {
+      border-block: 1px solid var(--rule-dark);
+    }
+
+    .evidence__head {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-md);
+      align-items: baseline;
+      padding-block: var(--space-xs);
+      border-block-end: 1px solid var(--rule);
+    }
+
+    .evidence h2,
+    .workflow h2,
+    .assurance h2,
+    .scope h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-md);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.35;
+    }
+
+    .evidence__meta {
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .metric {
+      min-width: 0;
+      padding: var(--space-sm) var(--space-md) var(--space-xs) 0;
+    }
+
+    .metric + .metric {
+      padding-inline-start: var(--space-md);
+      border-inline-start: 1px solid var(--rule);
+    }
+
+    .metric__label {
+      color: var(--ink-soft);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .metric__delta {
+      margin-block: var(--space-3xs);
+      color: var(--accent);
+      font-family: var(--font-display);
+      font-size: 1.72rem;
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+    .metric__before-after {
+      color: var(--ink);
+      font-family: var(--font-en);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      white-space: nowrap;
+    }
+
+    .metric__before-after span {
+      color: var(--muted);
+      font-size: 0.9em;
+      font-weight: 400;
+    }
+
+    .metric__meaning {
+      margin-block-start: var(--space-2xs);
+      color: var(--muted);
+      font-size: var(--text-2xs);
+      line-height: 1.45;
+    }
+
+    .evidence__note {
+      padding: var(--space-xs) 0;
+      border-block-start: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: var(--text-2xs);
+      line-height: 1.5;
+    }
+
+    .evidence__note strong {
+      color: var(--ink-soft);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.36fr) minmax(0, 0.84fr);
+      gap: var(--space-lg);
+      align-items: start;
+    }
+
+    .workflow__intro {
+      margin-block: var(--space-2xs) var(--space-xs);
+      color: var(--muted);
+      font-size: var(--text-xs);
+      line-height: 1.55;
+    }
+
+    .workflow-list {
+      list-style: none;
+      border-block-start: 1px solid var(--rule-dark);
+    }
+
+    .workflow-list li {
+      display: grid;
+      grid-template-columns: 1.65rem 7.8rem minmax(0, 1fr);
+      gap: var(--space-xs);
+      align-items: start;
+      padding-block: var(--space-xs);
+      border-block-end: 1px solid var(--rule);
+    }
+
+    .workflow__number {
+      color: var(--accent);
+      font-family: var(--font-display);
+      font-size: var(--text-md);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .workflow-list h3 {
+      font-size: var(--text-xs);
+      line-height: 1.45;
+    }
+
+    .workflow-list p {
+      color: var(--ink-soft);
+      font-size: var(--text-2xs);
+      line-height: 1.55;
+    }
+
+    .assurance {
+      display: grid;
+      gap: var(--space-xs);
+    }
+
+    .test-proof {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--space-xs);
+      align-items: center;
+      padding: var(--space-xs) var(--space-sm);
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .test-proof__number {
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .test-proof__number span {
+      color: var(--accent-soft);
+      font-size: 0.55em;
+    }
+
+    .test-proof__copy {
+      font-size: var(--text-2xs);
+      line-height: 1.45;
+    }
+
+    .test-proof__copy strong {
+      display: block;
+      margin-block-end: var(--space-3xs);
+      font-size: var(--text-xs);
+    }
+
+    .decision {
+      padding: var(--space-xs) var(--space-sm);
+      border: 1px solid var(--rule-dark);
+    }
+
+    .decision h3 {
+      margin-block: var(--space-2xs);
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      line-height: 1.45;
+    }
+
+    .decision p:last-child {
+      color: var(--ink-soft);
+      font-size: var(--text-2xs);
+      line-height: 1.55;
+    }
+
+    .assurance-list {
+      display: grid;
+      gap: 0;
+      list-style: none;
+      border-block-start: 1px solid var(--rule);
+    }
+
+    .assurance-list li {
+      position: relative;
+      padding: 0.32rem 0 0.32rem 1rem;
+      border-block-end: 1px solid var(--rule);
+      color: var(--ink-soft);
+      font-size: var(--text-2xs);
+      line-height: 1.45;
+    }
+
+    .assurance-list li::before {
+      position: absolute;
+      inset-block-start: 0.46rem;
+      inset-inline-start: 0;
+      color: var(--accent);
+      content: "✓";
+      font-family: var(--font-en);
+      font-weight: 700;
+    }
+
+    .scope {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+      gap: var(--space-lg);
+      padding-block: var(--space-xs);
+      border-block: 3px double var(--rule-dark);
+    }
+
+    .scope h2 {
+      margin-block: var(--space-2xs) var(--space-xs);
+    }
+
+    .scope__pages {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-3xs) var(--space-md);
+      list-style: none;
+      color: var(--ink-soft);
+      font-size: var(--text-2xs);
+      line-height: 1.45;
+    }
+
+    .scope__pages li {
+      position: relative;
+      min-width: 0;
+      padding-inline-start: 0.8rem;
+    }
+
+    .scope__pages li::before {
+      position: absolute;
+      inset-inline-start: 0;
+      content: "—";
+      color: var(--accent);
+    }
+
+    .scope__summary {
+      align-self: center;
+      padding-inline-start: var(--space-md);
+      border-inline-start: 1px solid var(--rule);
+    }
+
+    .scope__summary strong {
+      display: block;
+      margin-block: var(--space-2xs);
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      line-height: 1.4;
+    }
+
+    .scope__summary p:last-child {
+      color: var(--muted);
+      font-size: var(--text-2xs);
+      line-height: 1.5;
+    }
+
+    .footnotes {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.55fr);
+      gap: var(--space-lg);
+      color: var(--muted);
+      font-size: 0.57rem;
+      line-height: 1.45;
+    }
+
+    .footnotes strong {
+      color: var(--ink-soft);
+    }
+
+    .footnotes__aux {
+      text-align: right;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-md);
+      align-items: center;
+      margin-block-start: var(--space-3xs);
+      padding-block-start: var(--space-3xs);
+      border-block-start: 1px solid var(--rule-dark);
+      color: var(--muted);
+      font-family: var(--font-en);
+      font-size: var(--text-2xs);
+      letter-spacing: 0.04em;
+    }
+
+    .footer strong {
+      color: var(--ink);
+      font-family: var(--font-body);
+    }
+
+    @media (max-width: 47rem) {
+      body {
+        padding: 0;
+      }
+
+      .report {
+        min-height: auto;
+        padding: 1.35rem 1rem;
+      }
+
+      main {
+        flex: none;
+        align-content: normal;
+      }
+
+      .hero,
+      .detail-grid,
+      .scope,
+      .footnotes {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        gap: var(--space-md);
+      }
+
+      .hero h1 {
+        max-width: 100%;
+        font-size: clamp(1.85rem, 9vw, 2.7rem);
+      }
+
+      .metrics {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .metric,
+      .metric + .metric {
+        padding: var(--space-sm) 0;
+        border-inline-start: 0;
+      }
+
+      .metric + .metric {
+        border-block-start: 1px solid var(--rule);
+      }
+
+      .workflow-list li {
+        grid-template-columns: 1.5rem minmax(0, 1fr);
+      }
+
+      .workflow-list p {
+        grid-column: 2;
+      }
+
+      .scope__pages {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .scope__summary {
+        padding-block-start: var(--space-xs);
+        padding-inline-start: 0;
+        border-block-start: 1px solid var(--rule);
+        border-inline-start: 0;
+      }
+
+      .evidence__head,
+      .masthead,
+      .footer {
+        align-items: start;
+      }
+
+      .evidence__head {
+        flex-direction: column;
+        gap: var(--space-2xs);
+      }
+
+      .evidence__meta,
+      .masthead__meta,
+      .footnotes__aux {
+        text-align: left;
+      }
+
+      .footer {
+        flex-direction: column;
+        gap: var(--space-3xs);
+      }
+    }
+
+    @media (max-width: 23rem) {
+      .masthead {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .masthead__meta {
+        text-align: left;
+      }
+
+      .evidence__meta {
+        white-space: normal;
+      }
+
+      .status__value,
+      .metric__delta,
+      .metric__before-after {
+        white-space: normal;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+
+      html,
+      body {
+        background: var(--paper);
+      }
+
+      body {
+        min-height: auto;
+        padding: 0;
+      }
+
+      .report {
+        width: var(--page-width);
+        height: var(--page-height);
+        min-height: var(--page-height);
+        margin: 0;
+        overflow: hidden;
+        box-shadow: none;
+        break-after: avoid-page;
+        break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      main {
+        flex: 1;
+        align-content: space-between;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1.55fr) minmax(11rem, 0.55fr);
+        gap: var(--space-xl);
+      }
+
+      .metrics {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .metric,
+      .metric + .metric {
+        padding: var(--space-sm) var(--space-md) var(--space-xs) 0;
+        border-block-start: 0;
+      }
+
+      .metric + .metric {
+        padding-inline-start: var(--space-md);
+        border-inline-start: 1px solid var(--rule);
+      }
+
+      .detail-grid {
+        grid-template-columns: minmax(0, 1.36fr) minmax(0, 0.84fr);
+      }
+
+      .workflow-list li {
+        grid-template-columns: 1.65rem 7.8rem minmax(0, 1fr);
+      }
+
+      .workflow-list p {
+        grid-column: auto;
+      }
+
+      .scope {
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+      }
+
+      .scope__pages {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .scope__summary {
+        padding-block-start: 0;
+        padding-inline-start: var(--space-md);
+        border-block-start: 0;
+        border-inline-start: 1px solid var(--rule);
+      }
+
+      .footnotes {
+        grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.55fr);
+      }
+
+      .masthead__meta,
+      .evidence__meta,
+      .footnotes__aux {
+        text-align: right;
+      }
+
+      .footer {
+        flex-direction: row;
+        gap: var(--space-md);
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="report" aria-labelledby="report-title">
+    <header class="masthead">
+      <div>
+        <p class="masthead__kicker">Project completion report</p>
+        <p class="masthead__brand">鎌倉彫金工房</p>
+      </div>
+      <p class="masthead__meta">主要コースページ 表示品質改善<br><strong>2026.07.29</strong></p>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="section-kicker">作業完了報告</p>
+          <h1 id="report-title">主要コース7ページの<br><em>表示品質改善</em>を<br>完了しました。</h1>
+          <p class="hero__lead"><strong>見た目・掲載内容・操作方法は変えず、画像を読み込む順序と最初の通信量を見直しました。</strong> ページごとの調査、改善効果の高い対象の選定、テスト環境での実装と安全確認、本番反映、本番での再計測までを一貫して実施しています。</p>
+        </div>
+        <aside class="status" aria-label="完了状況">
+          <p class="status__label">Completion</p>
+          <p class="status__value">7 <span>/ 7 PAGES</span></p>
+          <dl class="status__facts">
+            <div><dt>対応範囲</dt><dd>基礎＋ページ別対策</dd></div>
+            <div><dt>公開状況</dt><dd>本番反映済み</dd></div>
+            <div><dt>最終確認</dt><dd>本番再計測済み</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="evidence" aria-labelledby="evidence-title">
+        <div class="evidence__head">
+          <h2 id="evidence-title">代表本番ページ「手作り結婚指輪」で確認できた成果</h2>
+          <p class="evidence__meta">Mobile Lighthouse · 3-run median</p>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <p class="metric__label">画像データ量</p>
+            <p class="metric__delta">約77%削減</p>
+            <p class="metric__before-after"><span>13.2 MB</span> → 3.0 MB</p>
+            <p class="metric__meaning">最初に受け取る画像データを約10.2MB削減</p>
+          </div>
+          <div class="metric">
+            <p class="metric__label">画像の読み込み件数</p>
+            <p class="metric__delta">約53%削減</p>
+            <p class="metric__before-after"><span>144件</span> → 67件</p>
+            <p class="metric__meaning">画面外の画像を一度に読まず、初期負担を軽減</p>
+          </div>
+          <div class="metric">
+            <p class="metric__label">表示の進み具合（Speed Index）</p>
+            <p class="metric__delta">3.3秒改善</p>
+            <p class="metric__before-after"><span>10.8秒</span> → 7.5秒</p>
+            <p class="metric__meaning">数値が小さいほど、画面の表示が早く進みます</p>
+          </div>
+        </div>
+        <p class="evidence__note"><strong>数値の読み方：</strong>上記は本番の代表1ページをスマートフォン想定・同条件で3回計測した中央値です。全7ページで同じ数値になることを示すものではありません。</p>
+      </section>
+
+      <div class="detail-grid">
+        <section class="workflow" aria-labelledby="workflow-title">
+          <p class="section-kicker">Scope of work</p>
+          <h2 id="workflow-title">調査から本番確認まで、4段階で実施</h2>
+          <p class="workflow__intro">単に設定を追加するのではなく、効果・安全性・今後の保守を確認しながら段階的に進めました。</p>
+          <ol class="workflow-list">
+            <li>
+              <span class="workflow__number">01</span>
+              <h3>調査・対象設計</h3>
+              <p>各ページの画像構成と読み込み状況を比較し、画像が多く改善効果を見込める主要7ページを優先対象として選定。</p>
+            </li>
+            <li>
+              <span class="workflow__number">02</span>
+              <h3>通信・先読み改善</h3>
+              <p>ページデータを小さく送る圧縮と、再訪時に端末内データを再利用する仕組みを整備。重要画像へ先読み設定を加え、読み込み開始を前倒し。</p>
+            </li>
+            <li>
+              <span class="workflow__number">03</span>
+              <h3>初期負担・ズレ対策</h3>
+              <p>画面下部の画像へ遅延読み込みを設定。画像の縦横サイズを追加し、表示途中の文字やボタンの移動を抑える土台を整備。</p>
+            </li>
+            <li>
+              <span class="workflow__number">04</span>
+              <h3>段階テスト・本番検証</h3>
+              <p>テスト環境で表示と動作を確認してから本番へ展開。代表ページを同条件で再計測し、改善結果を記録。</p>
+            </li>
+          </ol>
+        </section>
+
+        <aside class="assurance" aria-labelledby="assurance-title">
+          <p class="section-kicker">Quality assurance</p>
+          <h2 id="assurance-title">数値以外にも確認したこと</h2>
+          <div class="test-proof">
+            <p class="test-proof__number">0.22<span>〜</span>0.27<span>秒</span></p>
+            <p class="test-proof__copy"><strong>主要画像の読み込み開始を早期化</strong>横展開前のテスト環境・3ページで確認</p>
+          </div>
+          <div class="decision">
+            <p class="decision__kicker">保守まで考えた技術判断</p>
+            <h3>追加プラグインをむやみに増やさず、必要な箇所を直接改善</h3>
+            <p>更新負担や既存機能との相性、不具合時の切り分けまで検討。今回は影響を抑えられる方法を優先し、今後も運用しやすい状態を守りました。</p>
+          </div>
+          <ul class="assurance-list">
+            <li>見た目・掲載内容・操作方法を維持</li>
+            <li>テスト環境で確認後、本番へ段階反映</li>
+            <li>一度の値に頼らず、3回計測の中央値で比較</li>
+          </ul>
+        </aside>
+      </div>
+
+      <section class="scope" aria-labelledby="scope-title">
+        <div>
+          <p class="scope__label">Completed pages</p>
+          <h2 id="scope-title">対応完了した主要コース7ページ</h2>
+          <ul class="scope__pages">
+            <li>手作り結婚指輪</li>
+            <li>結婚指輪・婚約指輪（3本制作）</li>
+            <li>手作り婚約指輪</li>
+            <li>ダイヤモンドプロポーズ</li>
+            <li>Webオーダー</li>
+            <li>手作りアニバーサリー</li>
+            <li>手作りペアリング</li>
+          </ul>
+        </div>
+        <div class="scope__summary">
+          <p class="scope__label">Project value</p>
+          <strong>速さだけでなく、安全に運用し続けられる改善へ。</strong>
+          <p>効果の高い範囲に集中し、既存サイトへの影響と将来の保守負担を抑えながら、本番で確認できる成果まで仕上げました。</p>
+        </div>
+      </section>
+
+      <aside class="footnotes" aria-label="計測と成果に関する注記">
+        <p><strong>計測条件：</strong>本番代表ページ「手作り結婚指輪」／モバイル版Lighthouse／同条件3回の中央値。端末・通信状況・サーバー応答などにより実際の表示時間は変動します。表示性能の改善を示すもので、検索順位・予約数・売上の変化を直接保証するものではありません。</p>
+        <p class="footnotes__aux"><strong>補助検証：</strong>先読み設定のみを切り分けたローカル試験では、主要画像の読み込み開始が最大約0.87秒早まる結果を確認（主成果には含めず）。</p>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <p><strong>表示品質改善プロジェクト 完了</strong> · 作業記録・テスト計測・本番計測に基づき作成</p>
+      <p>株式会社トライブメディア · 2026.07.29</p>
+    </footer>
+  </article>
+</body>
+</html>
